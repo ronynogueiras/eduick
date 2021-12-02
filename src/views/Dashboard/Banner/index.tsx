@@ -20,7 +20,11 @@ const Banner: React.FC = () => {
           </p>
         </div>
         <div>
-          <img src="/images/meeting.png" alt="" />
+          <img
+            src="/images/meeting.png"
+            alt="Meeting"
+            className={clsx(styles.banner__image)}
+          />
         </div>
       </div>
     </section>

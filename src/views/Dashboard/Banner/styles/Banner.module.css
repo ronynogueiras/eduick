@@ -50,5 +50,31 @@
 }
 .banner__description {
 }
-.banner__image {
+
+@media (max-width: 576px) {
+  .banner__container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 1.25rem 1.25rem 4rem 1.25rem;
+  }
+  .banner__shape-1 {
+    width: 64px;
+    height: 64px;
+    top: 1%;
+    right: 30px;
+    left: auto;
+    z-index: 2;
+  }
+  .banner__shape-2 {
+    width: 32px;
+    height: 32px;
+    top: -5%;
+    left: auto;
+    right: 50px;
+    z-index: 3;
+  }
+  .banner__image {
+    display: none;
+  }
 }

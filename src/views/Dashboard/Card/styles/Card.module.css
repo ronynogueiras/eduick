@@ -1,0 +1,45 @@
+.card {
+  background-color: #fff;
+  box-shadow: 0px 32px 60px rgba(84, 95, 122, 0.08);
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0px 32px 60px rgba(84, 95, 122, 0.18);
+    transition: 200ms all;
+}
+.card__image {
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  max-height: 163px;
+  display: block;
+  object-fit: cover;
+}
+
+.card__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.card__rating--filled {
+  color: #ffc908;
+}
+.card__rating--outline {
+  color: #c4c4c4;
+}
+.card__lessons {
+  background: rgb(207, 201, 233, 0.4);
+  color: #000;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.625rem;
+}
+
+.card__title {
+  color: #200e64;
+  font-weight: normal;
+  font-size: 1.125rem;
+}
