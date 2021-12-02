@@ -7,6 +7,7 @@ import styles from "./styles/Dashboard.module.css";
 import { listCourses } from "../../services/courses";
 import { Course } from "../../domain/entities/Course";
 import Loading from "../../components/Loading";
+import Head from "next/head";
 
 const Dashboard: React.FC & { Layout: React.FC } = () => {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -28,26 +29,31 @@ const Dashboard: React.FC & { Layout: React.FC } = () => {
   }, []);
 
   return (
-    <div className={clsx("container", styles.dashboard)}>
-      <Banner />
-      <section className={clsx(styles.courses)}>
-        {courses.map((course: Course, idx) => (
-          <Card
-            key={idx}
-            image={course.image}
-            title={course.title}
-            rating={course.rating}
-            lessons={course.lessons}
-          />
-        ))}
-      </section>
-      {loading && <Loading />}
-      <div className={styles["show-more__container"]}>
-        <button className="button--primary" onClick={loadCourses}>
-          {loading ? "Loading..." : "Show more"}
-        </button>
+    <>
+      <Head>
+        <title>Eduick :: Dashboard</title>
+      </Head>
+      <div className={clsx("container", styles.dashboard)}>
+        <Banner />
+        <section className={clsx(styles.courses)}>
+          {courses.map((course: Course, idx) => (
+            <Card
+              key={idx}
+              image={course.image}
+              title={course.title}
+              rating={course.rating}
+              lessons={course.lessons}
+            />
+          ))}
+        </section>
+        {loading && <Loading />}
+        <div className={styles["show-more__container"]}>
+          <button className="button--primary" onClick={loadCourses}>
+            {loading ? "Loading..." : "Show more"}
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

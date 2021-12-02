@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import AuthContext from "../../contexts/auth";
 import styles from "./Home.module.css";
 import Login from "./Login";
+import Head from "next/head";
 
 const Home: React.FC = () => {
   const { showLoginModal } = useContext(AuthContext);
@@ -10,6 +11,9 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <Head>
+        <title>Eduick :: Find Your BEST TEACHER</title>
+      </Head>
       <section className={styles.section}>
         <div
           className={clsx(
