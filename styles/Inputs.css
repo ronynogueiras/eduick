@@ -1,0 +1,15 @@
+.input {
+  background: #7955e8;
+  border: 1px solid #a68eef;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 1rem 1rem;
+  outline: none;
+  color: #fff;
+}
+.input--full {
+  width: 100%;
+}
+.input::placeholder {
+  color: #fff;
+}

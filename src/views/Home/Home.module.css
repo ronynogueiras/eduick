@@ -1,0 +1,112 @@
+.section {
+  display: flex;
+  flex-direction: row;
+  max-width: 1024px;
+  margin: 0 auto;
+  min-height: 70vh;
+  padding-top: 4rem;
+}
+.section__block {
+  flex: 1 1 0%;
+}
+.section__divider {
+  height: 302px;
+  background: #200e64;
+  box-shadow: 4px 2px 14px rgba(0, 0, 0, 0.05);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+.section__block--shapes {
+  position: relative;
+}
+.section__shape {
+  position: absolute;
+  width: 384px;
+  height: 767px;
+  border-top-right-radius: 400px;
+  border-bottom-left-radius: 400px;
+  top: 0;
+  left: 0;
+}
+.section__shape--image {
+  background: url("/images/bg_banner_landing_page.png");
+  z-index: 10;
+}
+.section__shape--gradient-1 {
+  z-index: 8;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 234, 164, 0) 3.65%,
+    #ffeaa4 100%
+  );
+  left: -40px;
+  top: 40px;
+}
+.section__shape--gradient-2 {
+  z-index: 9;
+  background: linear-gradient(180deg, #864efd 0%, rgba(134, 78, 253, 0) 100%);
+  left: -80px;
+  transform: rotate(-21.37deg);
+}
+
+.section__shape-2--gradient {
+  position: absolute;
+  width: 193px;
+  height: 193px;
+  z-index: 11;
+  background: linear-gradient(180deg, #ffc700 0%, rgba(255, 199, 0, 0.6) 100%);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  bottom: -45px;
+  right: 42px;
+  transform: rotate(-180deg);
+}
+
+.section__form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.875rem;
+}
+
+.section__form--item {
+  flex: 1 1 0%;
+}
+
+.section__radio-button {
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-right: 0.75rem;
+  color: #fff;
+  font-size: 0.875rem;
+}
+.section__radio-button--active {
+  background: #7955e8;
+  border: 1px solid #a68eef;
+}
+.section__radio-button--inactive {
+  background: rgba(121, 85, 232, 0.3);
+  border: 1px solid rgba(121, 85, 232, 0.3);
+}
+
+.subtitle {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-size: 3rem;
+  color: #ffeaa4;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.description {
+  font-size: 1rem;
+  line-height: 191.68%;
+  margin: 3.75rem 0;
+  color: #fff;
+}
