@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import LandingPage from "../src/layout/LandingPage";
 import { NextPage } from "next";
 import Head from "next/head";
+import { AuthProvider } from "../src/contexts/auth";
 
 type AppLayoutProps = AppProps & {
   Component: NextPage & { Layout: React.FC };
@@ -20,9 +21,11 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
           rel="stylesheet"
         />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <AuthProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </AuthProvider>
     </>
   );
 }

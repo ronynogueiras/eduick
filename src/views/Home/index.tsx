@@ -1,8 +1,11 @@
 import clsx from "clsx";
-import React from "react";
+import React, { useContext, useState } from "react";
+import AuthContext from "../../contexts/auth";
 import styles from "./Home.module.css";
+import Login from "./Login";
 
 const Home: React.FC = () => {
+  const { showLoginModal } = useContext(AuthContext);
   return (
     <>
       <section className={styles.section}>
@@ -52,14 +55,20 @@ const Home: React.FC = () => {
               <div className={clsx(styles["section__form--item"])}>
                 <label
                   htmlFor="teacher"
-                  className={clsx(styles["section__radio-button"], styles["section__radio-button--active"])}
+                  className={clsx(
+                    styles["section__radio-button"],
+                    styles["section__radio-button--active"]
+                  )}
                 >
                   <input type="radio" name="type" id="teacher" />
                   I'M A TEACHER
                 </label>
                 <label
                   htmlFor="student"
-                  className={clsx(styles["section__radio-button"], styles["section__radio-button--inactive"])}
+                  className={clsx(
+                    styles["section__radio-button"],
+                    styles["section__radio-button--inactive"]
+                  )}
                 >
                   <input type="radio" name="type" id="student" />
                   I'M A STUDENT
@@ -73,6 +82,7 @@ const Home: React.FC = () => {
         </div>
       </section>
       <div className={clsx(styles["section__divider"])}></div>
+      {showLoginModal && <Login />}
     </>
   );
 };
