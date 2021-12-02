@@ -8,6 +8,40 @@
   height: 100%;
   display: flex;
   align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
+}
+.header__menu {
+  flex: 1;
+}
+.header__link {
+  color: #fff;
+  margin-left: 3rem;
+}
+.header__options {
+  display: flex;
+}
+.header__options--button {
+  background: rgb(32, 14, 100, 0.3);
+  border-radius: 4px;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 0 1rem;
+  margin-right: 1.5rem;
+}
+.header__options--button:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+.header__profile {
+  position: relative;
+}
+.header__profile--dot {
+  position: absolute;
+  z-index: 10;
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: #ffd74f;
+  top: -2px;
+  right: 1px;
 }
