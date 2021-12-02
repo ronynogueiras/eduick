@@ -74,7 +74,7 @@ const Home: React.FC = () => {
                       selectedType === "student",
                   })}
                 >
-                  I'M A TEACHER
+                  I{"'"}M A TEACHER
                   <input
                     type="radio"
                     value="teacher"
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
                       selectedType === "teacher",
                   })}
                 >
-                  I'M A STUDENT
+                  I{"'"}M A STUDENT
                   <input
                     type="radio"
                     value="student"
