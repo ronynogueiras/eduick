@@ -105,7 +105,6 @@ const Home: React.FC = () => {
           </form>
           <div className={clsx(styles["section__shape-4--gradient"])}></div>
           <div className={clsx(styles["section__shape-5--gradient"])}></div>
-
         </div>
       </section>
       <div className={clsx(styles["section__divider"])}></div>
