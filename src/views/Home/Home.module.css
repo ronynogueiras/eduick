@@ -8,15 +8,13 @@
 }
 .section__block {
   flex: 1 1 0%;
+  position: relative;
 }
 .section__divider {
   height: 302px;
   background: #200e64;
   box-shadow: 4px 2px 14px rgba(0, 0, 0, 0.05);
   transform: matrix(1, 0, 0, -1, 0, 0);
-}
-.section__block--shapes {
-  position: relative;
 }
 .section__shape {
   position: absolute;
@@ -61,7 +59,43 @@
   right: 42px;
   transform: rotate(-180deg);
 }
-
+.section__shape-3 {
+  position: absolute;
+  width: 193px;
+  height: 193px;
+  z-index: 12;
+  bottom: -120px;
+  right: -125px;
+  opacity: 0.5;
+  background: url("/images/shape_dots.png") no-repeat;
+}
+.section__shape-4--gradient {
+  position: absolute;
+  width: 383px;
+  height: 766px;
+  z-index: 13;
+  background: linear-gradient(180deg, #864efd 0%, rgba(134, 78, 253, 0) 100%);
+  border-top-right-radius: 400px;
+  border-bottom-left-radius: 400px;
+  top: 0;
+  right: -470px;
+  transform: rotate(-21.37deg);
+}
+.section__shape-5--gradient {
+  position: absolute;
+  width: 382px;
+  height: 763px;
+  z-index: 12;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 234, 164, 0) 3.65%,
+    #ffeaa4 100%
+  );
+  border-top-right-radius: 400px;
+  border-bottom-left-radius: 400px;
+  top: -65px;
+  right: -470px;
+}
 .section__form {
   display: flex;
   flex-direction: row;
@@ -74,12 +108,59 @@
 }
 
 .section__radio-button {
+  display: inline-block;
   box-sizing: border-box;
   border-radius: 4px;
-  padding: 0.75rem;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
   margin-right: 0.75rem;
   color: #fff;
   font-size: 0.875rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+.section__radio-button--input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.section__radio-button--checkmark {
+  position: absolute;
+  top: 28%;
+  left: 1rem;
+  height: 18px;
+  width: 18px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.section__radio-button--input:checked ~ .section__radio-button--checkmark {
+  background-color: #ffd74f;
+}
+.section__radio-button--checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.section__radio-button
+  .section__radio-button--input:checked
+  ~ .section__radio-button--checkmark:after {
+  display: block;
+}
+
+.section__radio-button .section__radio-button--checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid #b68300;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .section__radio-button--active {
   background: #7955e8;

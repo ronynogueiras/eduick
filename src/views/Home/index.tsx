@@ -6,15 +6,12 @@ import Login from "./Login";
 
 const Home: React.FC = () => {
   const { showLoginModal } = useContext(AuthContext);
+  const [selectedType, setSelectedType] = useState<string>("teacher");
+
   return (
     <>
       <section className={styles.section}>
-        <div
-          className={clsx(
-            styles["section__block--shapes"],
-            styles["section__block"]
-          )}
-        >
+        <div className={clsx(styles["section__block"])}>
           <div
             className={clsx(
               styles["section__shape"],
@@ -34,6 +31,7 @@ const Home: React.FC = () => {
             )}
           ></div>
           <div className={clsx(styles["section__shape-2--gradient"])}></div>
+          <div className={clsx(styles["section__shape-3"])}></div>
         </div>
         <div className={styles.section__block}>
           <h2 className={clsx(styles.subtitle, "font-title")}>Find your</h2>
@@ -55,23 +53,49 @@ const Home: React.FC = () => {
               <div className={clsx(styles["section__form--item"])}>
                 <label
                   htmlFor="teacher"
-                  className={clsx(
-                    styles["section__radio-button"],
-                    styles["section__radio-button--active"]
-                  )}
+                  className={clsx(styles["section__radio-button"], {
+                    [styles["section__radio-button--active"]]:
+                      selectedType === "teacher",
+                    [styles["section__radio-button--inactive"]]:
+                      selectedType === "student",
+                  })}
                 >
-                  <input type="radio" name="type" id="teacher" />
                   I'M A TEACHER
+                  <input
+                    type="radio"
+                    value="teacher"
+                    name="type"
+                    id="teacher"
+                    checked={selectedType === "teacher"}
+                    className={styles["section__radio-button--input"]}
+                    onChange={() => setSelectedType("teacher")}
+                  />
+                  <span
+                    className={styles["section__radio-button--checkmark"]}
+                  ></span>
                 </label>
                 <label
                   htmlFor="student"
-                  className={clsx(
-                    styles["section__radio-button"],
-                    styles["section__radio-button--inactive"]
-                  )}
+                  className={clsx(styles["section__radio-button"], {
+                    [styles["section__radio-button--active"]]:
+                      selectedType === "student",
+                    [styles["section__radio-button--inactive"]]:
+                      selectedType === "teacher",
+                  })}
                 >
-                  <input type="radio" name="type" id="student" />
                   I'M A STUDENT
+                  <input
+                    type="radio"
+                    value="student"
+                    name="type"
+                    id="student"
+                    checked={selectedType === "student"}
+                    className={styles["section__radio-button--input"]}
+                    onChange={() => setSelectedType("student")}
+                  />
+                  <span
+                    className={styles["section__radio-button--checkmark"]}
+                  ></span>
                 </label>
               </div>
               <div>
@@ -79,6 +103,9 @@ const Home: React.FC = () => {
               </div>
             </div>
           </form>
+          <div className={clsx(styles["section__shape-4--gradient"])}></div>
+          <div className={clsx(styles["section__shape-5--gradient"])}></div>
+
         </div>
       </section>
       <div className={clsx(styles["section__divider"])}></div>
