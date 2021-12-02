@@ -50,7 +50,7 @@ const Home: React.FC = () => {
         >
           <h2 className={clsx(styles.subtitle, "font-title")}>Find your</h2>
           <h1 className={clsx(styles.title, "font-title")}>BEST TEACHER</h1>
-          <p className={clsx(styles.description)}>
+          <p className={clsx(styles.description, "font-body")}>
             Whether you are a student trying to find your ideal private language
             teachers/tutors or a teacher trying to find great students for your
             customised private lessons!
@@ -67,12 +67,16 @@ const Home: React.FC = () => {
               <div className={clsx(styles["section__form--item"])}>
                 <label
                   htmlFor="teacher"
-                  className={clsx(styles["section__radio-button"], {
-                    [styles["section__radio-button--active"]]:
-                      selectedType === "teacher",
-                    [styles["section__radio-button--inactive"]]:
-                      selectedType === "student",
-                  })}
+                  className={clsx(
+                    styles["section__radio-button"],
+                    {
+                      [styles["section__radio-button--active"]]:
+                        selectedType === "teacher",
+                      [styles["section__radio-button--inactive"]]:
+                        selectedType === "student",
+                    },
+                    "font-body"
+                  )}
                 >
                   I{"'"}M A TEACHER
                   <input
@@ -90,12 +94,16 @@ const Home: React.FC = () => {
                 </label>
                 <label
                   htmlFor="student"
-                  className={clsx(styles["section__radio-button"], {
-                    [styles["section__radio-button--active"]]:
-                      selectedType === "student",
-                    [styles["section__radio-button--inactive"]]:
-                      selectedType === "teacher",
-                  })}
+                  className={clsx(
+                    styles["section__radio-button"],
+                    {
+                      [styles["section__radio-button--active"]]:
+                        selectedType === "student",
+                      [styles["section__radio-button--inactive"]]:
+                        selectedType === "teacher",
+                    },
+                    "font-body"
+                  )}
                 >
                   I{"'"}M A STUDENT
                   <input

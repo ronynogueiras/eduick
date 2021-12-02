@@ -5,6 +5,7 @@ import Link from "next/link";
 import AuthContext from "../../contexts/auth";
 import { RiMenu2Line } from "react-icons/ri";
 import MobileMenu from "./MobileMenu";
+import clsx from "clsx";
 
 const Header: React.FC = () => {
   const { handleOpenModal } = useContext(AuthContext);
@@ -13,8 +14,8 @@ const Header: React.FC = () => {
   return (
     <>
       <header>
-        <div className={styles.h__menu}>
-          <div className={styles["h__menu--item"]}>
+        <div className={styles.header__menu}>
+          <div className={styles["header__menu--item"]}>
             <div className={styles.hearder__logo}>
               <RiMenu2Line
                 className={styles.header__hamburguer}
@@ -26,10 +27,10 @@ const Header: React.FC = () => {
                 <Logo />
               </Link>
             </div>
-            <a href="#" className={styles["h__menu--link"]}>
+            <a href="#" className={clsx(styles["header__menu--link"], "font-body")}>
               How it works
             </a>
-            <a href="#" className={styles["h__menu--link"]}>
+            <a href="#" className={clsx(styles["header__menu--link"], "font-body")}>
               About Us
             </a>
           </div>

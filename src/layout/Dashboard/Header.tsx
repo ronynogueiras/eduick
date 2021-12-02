@@ -18,12 +18,14 @@ const Header: React.FC = () => {
         <div className={clsx(styles.header__container, "container")}>
           <Logo />
           <div className={styles.header__menu}>
-            <a href="#" className={styles.header__link}>
+            <a href="#" className={clsx(styles.header__link, "font-body")}>
               My Classes
             </a>
           </div>
           <div className={styles.header__options}>
-            <button className={styles["header__options--button"]}>
+            <button
+              className={clsx(styles["header__options--button"], "font-body")}
+            >
               CHANGE TO TEACHER MODE
             </button>
             <BiChevronDown

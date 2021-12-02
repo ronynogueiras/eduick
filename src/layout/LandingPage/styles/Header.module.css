@@ -1,4 +1,4 @@
-.h__menu {
+.header__menu {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -6,7 +6,7 @@
   margin: 0 auto;
   padding: 1.75rem;
 }
-.h__menu--item {
+.header__menu--item {
   flex: 1;
   align-items: center;
   display: flex;
@@ -17,11 +17,12 @@
   align-items: center;
   justify-content: center;
 }
-.h__menu--link {
+.header__menu--link {
   color: #fff;
+  font-weight: 400;
   margin-right: 3rem;
 }
-.h__menu--link:hover {
+.header__menu--link:hover {
   text-decoration: underline;
 }
 .header__hamburguer {
@@ -29,7 +30,7 @@
 }
 
 @media (max-width: 576px) {
-  .h__menu--link,
+  .header__menu--link,
   .header__get-started {
     display: none;
   }

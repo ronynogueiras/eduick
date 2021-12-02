@@ -40,7 +40,8 @@
 
 .card__title {
   color: #200e64;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 1.125rem;
   margin: 0 0 1rem;
+  font-style: normal;
 }

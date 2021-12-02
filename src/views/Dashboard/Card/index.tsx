@@ -27,9 +27,9 @@ const Card: React.FC<Props> = ({ title, image, rating, lessons }) => {
             />
           ))}
         </span>
-        <span className={clsx(styles.card__lessons)}>{lessons} LESSONS</span>
+        <span className={clsx(styles.card__lessons, 'font-body')}>{lessons} LESSONS</span>
       </div>
-      <h1 className={styles.card__title}>{title}</h1>
+      <h1 className={clsx(styles.card__title, 'font-title')}>{title}</h1>
     </div>
   );
 };

@@ -9,12 +9,12 @@ const Banner: React.FC = () => {
       <div className={clsx(styles["banner__shape-2"])}></div>
       <div className={clsx(styles.banner__container)}>
         <div className={clsx(styles.banner__wrapper)}>
-          <h1 className={clsx(styles.banner__title)}>
+          <h1 className={clsx(styles.banner__title, "font-title")}>
             Hello{" "}
             <span className={clsx(styles["banner__title--bold"])}>Student</span>
             <span className={clsx(styles["banner__title--dot"])}>.</span>
           </h1>
-          <p>
+          <p className="font-body">
             Whether you are a student trying to find your ideal private language
             teachers/tutors
           </p>
