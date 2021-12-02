@@ -11,8 +11,11 @@
   align-items: center;
   display: flex;
 }
-.h__menu--logo {
+.hearder__logo {
   margin-right: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .h__menu--link {
   color: #fff;
@@ -20,4 +23,21 @@
 }
 .h__menu--link:hover {
   text-decoration: underline;
+}
+.header__hamburguer {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .h__menu--link,
+  .header__get-started {
+    display: none;
+  }
+  .header__hamburguer {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #fff;
+    margin-right: 1.125rem;
+  }
 }

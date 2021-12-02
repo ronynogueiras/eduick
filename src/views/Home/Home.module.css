@@ -1,7 +1,7 @@
 .section {
   display: flex;
   flex-direction: row;
-  max-width: 1024px;
+  max-width: 1280px;
   margin: 0 auto;
   min-height: 70vh;
   padding-top: 4rem;
@@ -9,7 +9,9 @@
 .section__block {
   flex: 1 1 0%;
   position: relative;
+  padding: 0 1.5rem;
 }
+
 .section__divider {
   height: 302px;
   background: #200e64;
@@ -190,4 +192,50 @@
   line-height: 191.68%;
   margin: 3.75rem 0;
   color: #fff;
+}
+
+@media (max-width: 576px) {
+  .section {
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .section__block--shapes {
+    order: 2;
+    display: flex;
+  }
+  .section__block--form {
+    flex: none;
+    margin-bottom: 3rem;
+  }
+  .section__shape-2--gradient,
+  .section__shape-3,
+  .section__shape-4--gradient,
+  .section__shape-5--gradient,
+  .description {
+    display: none;
+  }
+  .section__shape {
+    width: 208px;
+    height: 415px;
+    background-size: cover;
+    left: 20%;
+  }
+  .subtitle,
+  .title {
+    font-size: 1.5rem;
+  }
+  .title {
+    margin-bottom: 3.75rem;
+  }
+  .section__form {
+    flex-direction: column;
+  }
+  .form__action {
+    margin-top: 1rem;
+  }
+  .form__action,
+  .form__search-button {
+    display: block;
+    width: 100%;
+  }
 }

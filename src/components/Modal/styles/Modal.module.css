@@ -38,3 +38,19 @@
   border-radius: 4px;
   padding: 2.5rem;
 }
+
+@media (max-width: 576px) {
+  .modal__content {
+    width: 100vw;
+    height: 100vh;
+  }
+  .modal__close {
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 51px;
+    height: 51px;
+    font-size: 1.75rem;
+  }
+}

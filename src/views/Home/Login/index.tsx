@@ -66,7 +66,14 @@ const Login: React.FC = () => {
             </div>
           </div>
           <div className={styles.form__action}>
-            <button className="button--primary">LOGIN</button>
+            <button
+              className={clsx(
+                "button--primary",
+                styles["form__action--button"]
+              )}
+            >
+              LOGIN
+            </button>
           </div>
         </form>
       </div>

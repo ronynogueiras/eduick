@@ -11,7 +11,12 @@ const Home: React.FC = () => {
   return (
     <>
       <section className={styles.section}>
-        <div className={clsx(styles["section__block"])}>
+        <div
+          className={clsx(
+            styles["section__block"],
+            styles["section__block--shapes"]
+          )}
+        >
           <div
             className={clsx(
               styles["section__shape"],
@@ -33,7 +38,12 @@ const Home: React.FC = () => {
           <div className={clsx(styles["section__shape-2--gradient"])}></div>
           <div className={clsx(styles["section__shape-3"])}></div>
         </div>
-        <div className={styles.section__block}>
+        <div
+          className={clsx(
+            styles.section__block,
+            styles["section__block--form"]
+          )}
+        >
           <h2 className={clsx(styles.subtitle, "font-title")}>Find your</h2>
           <h1 className={clsx(styles.title, "font-title")}>BEST TEACHER</h1>
           <p className={clsx(styles.description)}>
@@ -98,8 +108,15 @@ const Home: React.FC = () => {
                   ></span>
                 </label>
               </div>
-              <div>
-                <button className="button--primary">SEARCH</button>
+              <div className={styles.form__action}>
+                <button
+                  className={clsx(
+                    "button--primary",
+                    styles["form__search-button"]
+                  )}
+                >
+                  SEARCH
+                </button>
               </div>
             </div>
           </form>

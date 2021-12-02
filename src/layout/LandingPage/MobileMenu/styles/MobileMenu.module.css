@@ -1,0 +1,52 @@
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #200e64;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  padding: 2rem 1.5rem;
+}
+
+.mobile-menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu__header--close {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3.75rem;
+}
+
+.mobile-menu__list--item {
+  color: #fff;
+  font-size: 1.31rem;
+  text-align: center;
+  display: block;
+  padding: 0.5rem;
+}
+
+.mobile-menu__get-started,
+.mobile-menu__get-started--action {
+  display: block;
+  width: 100%;
+}
