@@ -8,7 +8,7 @@ const Banner: React.FC = () => {
       <div className={clsx(styles["banner__shape-1"])}></div>
       <div className={clsx(styles["banner__shape-2"])}></div>
       <div className={clsx(styles.banner__container)}>
-        <div>
+        <div className={clsx(styles.banner__wrapper)}>
           <h1 className={clsx(styles.banner__title)}>
             Hello{" "}
             <span className={clsx(styles["banner__title--bold"])}>Student</span>
@@ -19,7 +19,8 @@ const Banner: React.FC = () => {
             teachers/tutors
           </p>
         </div>
-        <div>
+        <div className={styles["banner__image--wrapper"]}>
+          <div className={styles["banner__shape-image"]}></div>
           <img
             src="/images/meeting.png"
             alt="Meeting"

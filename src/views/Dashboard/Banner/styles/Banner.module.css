@@ -33,7 +33,11 @@
   display: flex;
   flex-direction: row;
   position: relative;
+  justify-content: space-between;
   padding: 2rem 6.8rem 1.25rem 8rem;
+}
+.banner__wrapper {
+  max-width: 60%;
 }
 .banner__title {
   color: #200e64;
@@ -48,9 +52,29 @@
   font-weight: bold;
   font-size: 1.5rem;
 }
-.banner__description {
+.banner__image--wrapper {
+  position: relative;
 }
-
+.banner__shape-image {
+  position: absolute;
+  width: 166px;
+  height: 250px;
+  top: -25%;
+  border-radius: 0 400px 0 400px;
+  background: linear-gradient(
+    180deg,
+    rgba(155, 155, 155, 0.15) 0%,
+    #eef2f4 0.01%,
+    #ffffff 100%
+  );
+  transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  z-index: 1;
+}
+.banner__image {
+  position: relative;
+  z-index: 3;
+}
 @media (max-width: 576px) {
   .banner__container {
     display: flex;
@@ -74,7 +98,11 @@
     right: 50px;
     z-index: 3;
   }
-  .banner__image {
+  .banner__image,
+  .banner__image--wrapper {
     display: none;
+  }
+  .banner__wrapper {
+    min-width: 100%;
   }
 }
