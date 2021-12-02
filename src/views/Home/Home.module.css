@@ -58,7 +58,7 @@
   border-bottom-left-radius: 50%;
   border-top-right-radius: 50%;
   bottom: -45px;
-  right: 42px;
+  right: 162px;
   transform: rotate(-180deg);
 }
 .section__shape-3 {
@@ -67,7 +67,7 @@
   height: 193px;
   z-index: 12;
   bottom: -120px;
-  right: -125px;
+  right: -5px;
   opacity: 0.5;
   background: url("/images/shape_dots.png") no-repeat;
 }
@@ -218,7 +218,19 @@
     width: 208px;
     height: 415px;
     background-size: cover;
-    left: 20%;
+    left: 22%;
+  }
+  .section__shape--image {
+    z-index: 11;
+  }
+  .section__shape--gradient-1 {
+    left: 45px;
+    top: 20px;
+    z-index: 10;
+  }
+  .section__shape--gradient-2 {
+    top: 60px;
+    left: 60px;
   }
   .subtitle,
   .title {

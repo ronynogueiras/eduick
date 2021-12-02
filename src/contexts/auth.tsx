@@ -9,7 +9,7 @@ interface AuthContextProps {
 const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
 export const AuthProvider: React.FC = ({ children }) => {
-  const [showLoginModal, setShowLoginModal] = useState<boolean>(true);
+  const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
 
   const handleCloseModal = () => {
     setShowLoginModal(false);
